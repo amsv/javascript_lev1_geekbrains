@@ -1,23 +1,12 @@
 // Задание 1
-console.log(" ");
- let a = [
+console.log("Задание 1");
+let a = [
     [{name: 'Mary', age: 23}, {name: 'Mike', age: 45}, {name: 'Nick', age: 11}],
     [{name: 'Adam', age: 56}, {name: 'Sara', age: 21}, {name: 'Don', age: 22}],
     [{name: 'Karl', age: 34}, {name: 'Marta', age: 76}, {name: 'John', age: 19}]
    ];
- 
-let b = [
-   [{name: '', age: 0}, {name: '', age: 0}, {name: '', age: 0}],
-   [{name: '', age: 0}, {name: '', age: 0}, {name: '', age: 0}],
-   [{name: '', age: 0}, {name: '', age: 0}, {name: '', age: 0}]
-   ];
 
-for (let i = 0; i < a.length; i++) {
-   for (let j = 0; j < a[i].length; j++) {
-      b[i][j].age = a[i][j].age;
-      b[i][j].name = a[i][j].name;  
-   } 
-}
+let b = JSON.parse(JSON.stringify(a))
 
 // Задание 2
 // price - цена за ед. товара, amount - кол-во товаров
